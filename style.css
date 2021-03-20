@@ -1,0 +1,599 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+
+body {
+    width: 1140px;
+    margin: 0 auto;
+    font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+::selection {
+    background: rgba(255, 88, 88, 0.7);
+    color: white;
+}
+
+
+/* header styles */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.header ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header ul li {
+    padding: 0 10px;
+}
+
+.header ul li a {
+    font-size: 12px;
+    color: #777777;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.header ul li a:hover, .card h2 a:hover {
+    color: #ff5858;
+}
+
+.header .sitename a {
+    text-decoration: none;
+    color: black;
+    width: 70%;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* main page block styles */
+
+.phrase {
+    font-size: 28px;
+    line-height: 42px;
+    max-width: 700px;
+    text-align: center;
+    margin: 140px auto;
+}
+
+.main-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main-block .card {
+    width: 30%;
+    padding-bottom: 30px;
+    margin-top: 60px;
+    /*overflow: hidden;*/
+    border: 1px solid lightgrey;
+}
+
+.card img {
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.card:hover img {
+    filter: brightness(50%);
+}
+
+.card h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.card:hover h2 a {
+    color: #ff5858;
+}
+
+.card h2, .main-block .card h3 {
+    text-align: center;
+}
+
+.card h2 a {
+    color: #393434;
+    text-decoration: none;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.button a, .button button {
+    background: rgb(255, 88, 88);
+    text-decoration: none;
+    color: white;
+    padding: 15px 35px;
+    margin: 30px 0 50px;
+    text-transform: uppercase;
+    transition: box-shadow 0.5s;
+    border: none;
+    font-family: inherit;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.button a:hover {
+    box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer p {
+    padding: 40px 0;
+}
+
+
+
+/* single page */
+
+.main-block .bg {
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.text-block {
+    display: flex;
+    font-size: 15px;
+    line-height: 26px;
+    color: rgb(33, 37, 41);
+    font-weight: 400;
+}
+
+.text-block .list {
+    width: 30%;
+    margin-right: 20px;
+}
+
+.text-block .list li {
+    border: 1px solid rgba(0,0,0,.125);
+    margin-bottom: -1px;
+    padding: 10px;
+}
+
+.text-block .text {
+    width: 70%;
+}
+
+.text-block .text p {
+    margin-bottom: 12px;
+}
+
+
+/* calculator */
+.calculator {
+    margin-top: 120px 0;
+}
+
+.calculator .block_calculator{
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    margin: 30px auto;
+}
+
+.calculator input {
+    width: 100%;
+    margin-bottom: 25px;
+    box-shadow: none;
+    height: 44px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    color: #495057;
+    font-size: 18px;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+.calculator button {
+    background: rgb(255, 88, 88);
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    transition: box-shadow 0.5s;
+    border: none;
+    font-family: inherit;
+    font-size: 30px;
+    width: 20%;
+    height: 40px;
+}
+
+.calculator .buttons_block {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calculator .result {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+
+
+/* contact page */
+.contact {
+    margin-top: 60px;
+    display: flex;
+}
+
+.contact .cont {
+    width: 40%;
+}
+
+.contact .form {
+    width: 60%;
+}
+
+.contact .contact-block {
+    display: flex;
+}
+
+.contact .contact-desc {
+    margin-bottom: 22px;
+}
+
+.contact .contact-desc h5 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.contact .contact-desc p {
+    color: #6c757d;
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.form div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form form input, .form textarea {
+    width: 100%;
+    margin-bottom: 25px;
+    box-shadow: none;
+    height: 44px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    color: #495057;
+    font-size: 18px;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+.form textarea {
+    height: unset;
+}
+
+.form div input {
+    width: 48%;
+}
+
+
+/* todolist */
+.todo {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.todo .todo-header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.todo .todo-header h2 {
+    font-size: 40px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.todo .todo-header p {
+    font-size: 20px;
+    padding-bottom: 24px;
+}
+
+.todo .list {
+    background: rgb(255, 88, 88);
+}
+
+.todo .list li {
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 18px;
+    height: 40px;
+}
+
+.todo .list li p {
+    width: 90%;
+}
+
+.todo .list li span {
+    margin-right: 10px;
+    text-align: center;
+    width: 0;
+    opacity: 0.5;
+    transition: 0.3s linear;
+    width: 10%;
+}
+
+.todo .list li:hover span{
+    opacity: 1.0;
+}
+
+.todo .checked {
+    /*color:gray;*/
+    text-decoration:line-through;
+    opacity: 0.5;
+}
+
+.todo input {
+    width: 100%;
+    box-sizing: border-box;
+    /*border: 2px black solid;*/
+    outline: none;
+    height: 38px;
+}
+
+.todo .todo-footer {
+    display: flex;
+    align-items: center;
+    background: rgb(255, 88, 88);
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.todo .todo-footer input {
+    font-size: 16px;
+}
+
+.todo .todo-footer span {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.todo .clear {
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 38px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 16px;
+    background: rgb(255, 88, 88);
+}
+
+@media (max-width: 960px){ 
+.sitename {
+    display: none;
+}
+.header {
+    justify-content: space-around;
+}
+.header ul li a {
+    font-size: 8px;
+    color: #777777;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.footer {
+    font-size: 15px;
+    justify-content: space-around;
+}
+.footer p {
+    max-width: 150px;
+    line-height: 15px;
+}
+body, html{
+    width: 100%;
+}
+.main-block {
+    display: block;
+    text-align: -webkit-center;
+}
+.phrase {
+    font-size: 18px;
+    line-height: 45px;
+    max-width: 300px;
+    text-align: center;
+}
+.main-block .card{
+    width: 70%; 
+}
+.sitename_mobile a {
+    display: block;
+    padding-block-start: 10%;
+    margin-block-end: -15%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 32px;
+}
+.header {display: none;}
+}
+@media screen and (min-width: 960px){
+    .sitename_mobile{display:none;}
+    .header_mobile {display: none;}
+}
+.hidden-menu-ticker {
+    display: none;
+}
+.btn-menu {
+    color: #fff;
+    border:1px solid #222;
+    padding: 5px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    transition: left .23s;
+    z-index: 3;
+    width: 25px;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+ 
+.btn-menu span {
+    display: block;
+    height: 5px;
+    background-color: black;
+    margin: 5px 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+}
+ 
+.btn-menu span.first {
+    margin-top: 0;
+}
+.hidden-menu {
+    display: block;
+    position: fixed;
+    list-style:none;
+    padding: 50px 10px 10px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 200px;
+    background-color: black;
+    height: 100%;
+    top: 0;
+    left: -200px;
+    transition: left .2s;
+    z-index: 2;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+ 
+.hidden-menu li {
+    padding:10px 0;
+}
+ 
+.hidden-menu li a {
+    font-size:15px;
+    color: white;
+    padding:6px 0px;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu {
+    left: 160px;
+    background-color: white;
+}
+.hidden-menu-ticker:checked ~ .hidden-menu {
+    left: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+    -webkit-transform: rotate(45deg);
+    top: 10px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+    opacity: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+    -webkit-transform: rotate(-45deg);
+    top: -10px;
+}
+@media screen and (min-width: 540px) and (max-width: ){
+.phrase {
+    font-size: 28px;
+    line-height: 42px;
+    max-width: 480px;
+    text-align: center;
+    margin: 170px auto;
+
+}
+.sitename_mobile a {
+    font-size: 40px;
+}
+}
